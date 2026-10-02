@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<script src="https://kit.fontawesome.com/b6a222e7c8.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="src/main.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Cistercian Numeral Generator</title>
+	</head>
+	<body>
+		<h1>Sami's Cistercian Numeral Generator</h1>
+		<button title="What is This?" id="help" onclick="openModal()"><i class="fa-solid fa-question"></i></button>
+		<svg width="250" height="360" xmnls="http://www.w3.org/2000/svg" id="output">
+			<line x1="125" x2="125" y1="60" y2="300" stroke="black" stroke-width="4"></line>
+
+		<!-- Code should insert new polylines here -->
+		</svg>
+
+		<div id="input">
+			<label for="input">Enter a number between <b>1</b> and <b>9999</b>: </label>
+			<input name="input" id="numInput" type="number" min="1" max="9999" step="1">
+			<br>
+
+			<button onclick="genGlyph(numInput.value)">Generate</button>
+
+			<button id="rot" onclick="rotateGlyph()">Rotate</button>
+		</div>
+
+		<div id="modal">
+			<button onclick="closeModal()"><i class="fa-solid fa-times"></i></button>
+			<div id="info">
+			<h2>What are Cistercian Numerals?</h2>
+			<p><b><a title="wikipedia:Cistercian numerals" href="https://en.wikipedia.org/wiki/Cistercian_numerals">Cistercian numerals <i class="fa-solid fa-arrow-up-right-from-square"></i></a></b> are a form of numeric ligature developed in the thirteenth century by the Cistercian monastic order as a way of writing numerals using a singular glyph. Originally, it was a two-digit glyph that went from <b>1</b> to <b>99</b>, introduced to the order by archdeacon John of Basingstoke, and was based on <i>ars notoria</i>, a form of shorthand used in the twelfth century. It was subsequently expanded to represent the numbers <b>1</b> to <b>9999</b>. The traditional numbers were written using a horizontal "stave", but the vertical stave was used in Northern France until the fourteenth century. When Cistercian numerals made a comeback in the eighteenth and nineteenth centuries in France and Germany, they exclusively used the vertical stave.</p>
+
+			<p>Each glyph consists of one central line (the stave), and up to four additional glyphs; the placement of each glyph denotes the placement of the number (ones, tens, hundreds, or thousands), and the glyph itself is the digit. For example, this is the number <b>3851</b> as a Cistercian number:</p>
+
+				<img src="https://github.com/Pandappuccino/cistercian-generator/raw/main/src/3851.png">
+
+				<p>In vertical-stave glyphs, the number is read from left to right and from bottom to top. In order, the glyph is read from lower-left, lower-right, upper-left, and upper-right.</p>
+				<p>Horizonta-stave glyphs are written much the same way, but the entire glyph is rotated 90 degrees counterclockwise, as shown with this representation of the number <b>8207</b>:</p>
+
+				<img src="https://github.com/Pandappuccino/cistercian-generator/raw/main/src/8207.png">
+
+				<p>Horizontal glyphs are subsequently read from bottom to top and from right to left: lower-right, upper-right, lower-left, upper-left. Note that there is no glyph in the tens position; 0 is not represented with any sort of glyph, and if a number has a 0 in it, the placement is left blank.</p>
+		</div>
+		</div>
+		<script src="src/main.js"></script>
+	</body>
+</html>

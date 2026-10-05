@@ -10,12 +10,14 @@
 	<body>
 		<h1>Sami's Cistercian Numeral Generator</h1>
 		<button title="What is This?" id="help" onclick="openModal()"><i class="fa-solid fa-question"></i></button>
+		<div id="container">
 		<svg width="250" height="360" xmnls="http://www.w3.org/2000/svg" id="output">
 			<line x1="125" x2="125" y1="60" y2="300" stroke="black" stroke-width="4"></line>
 
 		<!-- Code should insert new polylines here -->
 		</svg>
-
+		</div>
+		
 		<div id="input">
 			<label for="input">Enter a number between <b>1</b> and <b>9999</b>: </label>
 			<input name="input" id="numInput" type="number" min="1" max="9999" step="1">
@@ -34,14 +36,14 @@
 
 			<p>Each glyph consists of one central line (the stave), and up to four additional glyphs; the placement of each glyph denotes the placement of the number (ones, tens, hundreds, or thousands), and the glyph itself is the digit. For example, this is the number <b>3851</b> as a Cistercian number:</p>
 
-				<img src="https://github.com/Pandappuccino/cistercian-generator/raw/main/src/3851.png">
+			<img src="https://github.com/Pandappuccino/cistercian-generator/raw/main/src/3851.png">
 
-				<p>In vertical-stave glyphs, the number is read from left to right and from bottom to top. In order, the glyph is read from lower-left, lower-right, upper-left, and upper-right.</p>
-				<p>Horizonta-stave glyphs are written much the same way, but the entire glyph is rotated 90 degrees counterclockwise, as shown with this representation of the number <b>8207</b>:</p>
+			<p>In vertical-stave glyphs, the number is read from left to right and from bottom to top. In order, the glyph is read from lower-left, lower-right, upper-left, and upper-right.</p>
+			<p>Horizonta-stave glyphs are written much the same way, but the entire glyph is rotated 90 degrees counterclockwise, as shown with this representation of the number <b>8207</b>:</p>
 
-				<img src="https://github.com/Pandappuccino/cistercian-generator/raw/main/src/8207.png">
+			<img src="https://github.com/Pandappuccino/cistercian-generator/raw/main/src/8207.png">
 
-				<p>Horizontal glyphs are subsequently read from bottom to top and from right to left: lower-right, upper-right, lower-left, upper-left. Note that there is no glyph in the tens position; 0 is not represented with any sort of glyph, and if a number has a 0 in it, the placement is left blank.</p>
+			<p>Horizontal glyphs are subsequently read from bottom to top and from right to left: lower-right, upper-right, lower-left, upper-left. Note that there is no glyph in the tens position; 0 is not represented with any sort of glyph, and if a number has a 0 in it, the placement is left blank.</p>
 		</div>
 		</div>
 		<script src="src/main.js"></script>

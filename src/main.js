@@ -14,6 +14,7 @@ var num;
 
 // Rotation button
 const rotBtn = document.querySelector('#rot');
+const cont = document.querySelector('#container');
 var rotate = false;
 
 // Popover modal and buttons
@@ -217,11 +218,11 @@ function genGlyph(input) {
 
 function rotateGlyph() {
 	if (rotate == false) {
-		output.style.transform = "rotate(-90deg)";
+		cont.style.transform = "rotate(-90deg)";
 		rotBtn.innerHTML = "Reset";
 		rotate = true;
 	} else {
-		output.style.transform = "none";
+		cont.style.transform = "none";
 		rotBtn.innerHTML = "Rotate";
 		rotate = false;
 	}
